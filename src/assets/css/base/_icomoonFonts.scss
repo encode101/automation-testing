@@ -1,0 +1,236 @@
+@font-face {
+  font-family: 'imps-font';
+  src: url('../fonts/icomoon/imps-font.eot?66auhq');
+  src: url('../fonts/icomoon/imps-font.eot?66auhq#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/imps-font.ttf?66auhq') format('truetype'),
+    url('../fonts/icomoon/imps-font.woff?66auhq') format('woff'),
+    url('../fonts/icomoon/imps-font.svg?66auhq#imps-font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="mips-icon"],
+[class*=" mips-icon"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'imps-font' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper-mips {
+  .mips-icon-hospital:before {
+    content: "\e900";
+  }
+
+  .mips-icon-baner-vector:before {
+    content: "\e901";
+  }
+
+  .mips-icon-search-appointment:before {
+    content: "\e902";
+  }
+
+  .mips-icon-provider:before {
+    content: "\e903";
+  }
+
+  .mips-icon-group-enrollment:before {
+    content: "\e904";
+  }
+
+  .mips-icon-info-blue:before {
+    content: "\e905";
+  }
+
+  .mips-icon-search-grey:before {
+    content: "\e906";
+  }
+
+  .mips-icon-right-arrow:before {
+    content: "\e907";
+  }
+
+  .mips-icon-left-arrow:before {
+    content: "\e908";
+  }
+
+  .mips-icon-footer-prev:before {
+    content: "\e909";
+  }
+
+  .mips-icon-footer-next:before {
+    content: "\e90a";
+  }
+
+  .mips-icon-lock-open:before {
+    content: "\e90b";
+  }
+
+  .mips-icon-horizontal-ellipse:before {
+    content: "\e90c";
+  }
+
+  .mips-icon-setting:before {
+    content: "\e90d";
+  }
+
+  .mips-icon-invalid:before {
+    content: "\e90e";
+  }
+
+  .mips-icon-warning:before {
+    content: "\e90f";
+  }
+
+  .mips-icon-toast-tick:before {
+    content: "\e910";
+  }
+
+  .mips-icon-cross-fill:before {
+    content: "\e911";
+  }
+
+  .mips-icon-caret-down:before {
+    content: "\e912";
+  }
+
+  .mips-icon-sort-alt:before {
+    content: "\e913";
+  }
+
+  .mips-icon-delete:before {
+    content: "\e914";
+  }
+
+  .mips-icon-filter:before {
+    content: "\e915";
+  }
+
+  .mips-icon-minus:before {
+    content: "\e916";
+  }
+
+  .mips-icon-add:before {
+    content: "\e917";
+  }
+
+  .mips-icon-TI_noBnechmark:before {
+    content: "\e918";
+    color: #fb6e6d;
+  }
+
+  .mips-icon-TI_mediumWeight:before {
+    content: "\e919";
+    color: #e88841;
+  }
+
+  .mips-icon-TI_inverseMeasure:before {
+    content: "\e91a";
+    color: #1f4e79;
+  }
+
+  .mips-icon-TI_intermediateOutcome:before {
+    content: "\e91b";
+    color: #66afe9;
+  }
+
+  .mips-icon-TI_highWeight:before {
+    content: "\e91c";
+    color: #2a6993;
+  }
+
+  .mips-icon-TI_highPriority:before {
+    content: "\e91d";
+    color: #c20006;
+  }
+
+  .mips-icon-TI_fullCredit:before {
+    content: "\e91e";
+    color: #034763;
+  }
+
+  .mips-icon-TI_7PointCap:before {
+    content: "\e91f";
+    color: #3a89c0;
+  }
+
+  .mips-icon-alert-error:before {
+    content: "\e920";
+    color: #fff;
+  }
+
+  .mips-icon-unlock:before {
+    content: "\e921";
+    color: #737373;
+  }
+
+  .mips-icon-calendar:before {
+    content: "\e922";
+  }
+
+  .mips-icon-facility:before {
+    content: "\e923";
+    color: #2a6993;
+  }
+
+  .mips-icon-close-bold:before {
+    content: "\e924";
+  }
+
+  .mips-icon-modal-close:before {
+    content: "\e925";
+    color: #fff;
+  }
+
+  .mips-icon-telephone:before {
+    content: "\e926";
+    color: #666;
+  }
+  .mips-icon-person-sm:before {
+    content: "\e927";
+    color: #2a6993;
+  }
+  .mips-icon-person-lg:before {
+    content: "\e928";
+    color: #3ca2cb;
+  }
+  .mips-icon-location-grey:before {
+    content: "\e929";
+    color: #666;
+  }
+  .mips-icon-gift:before {
+    content: "\e92a";
+    color: #666;
+  }
+  .mips-icon-email:before {
+    content: "\e92b";
+    color: #666;
+  }
+  .mips-icon-cellphone:before {
+    content: "\e92c";
+    color: #666;
+  }
+  .mips-icon-p-text:before {
+    content: "\e92d";
+    color: #737373;
+  }
+
+  .mips-icon-provider-2:before {
+    content: "\e92e";
+    color: #2a6993;
+  }
+
+  .mips-icon-pending:before {
+    content: "\e92f";
+  }
+  
+}

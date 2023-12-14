@@ -1,0 +1,34 @@
+//#abstracts rule here
+@import "abstract/variables";
+@import "abstract/mixins";
+
+//#Base Rules here
+@import "base/fonts";
+@import "base/reset";
+@import "base/icomoonFonts";
+
+//#layout Rules here
+@import "layout/typograpghy";
+@import "layout/spacer";
+@import "layout/border";
+@import "layout/buttons";
+@import "layout/form_group";
+@import "layout/flex_layout";
+
+//custom rules (dialogue modal, etc)
+@import "components/toaster";
+@import "components/tooltip";
+@import "components/customTable";
+@import "components/simpleLookups";
+@import "components/confirmationAlert";
+@import "components/breadcrumbs";
+@import "components/tabs";
+@import "components/customDropdown";
+@import "components/customMultiselect";
+@import "components/customDatepicker";
+@import "components/customModal";
+@import "components/commonComponents";
+
+
+
+

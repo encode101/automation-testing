@@ -1,0 +1,8 @@
+<div class="holder wrapper-mips">
+
+  <lib-multi-select-drop-down class="w-full-100px"
+    (selectedItems)="selectedMultiSelectValue($event,filter_config,'qualityReportingYear')"
+    selectedValue="{{filter_config.qualityReportingYear}}" placeholder="Select an option" optionLabel=""
+    [options]="providerList" showBadges="1"></lib-multi-select-drop-down>
+
+</div>

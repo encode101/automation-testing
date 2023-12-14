@@ -1,0 +1,71 @@
+<div class="custom-multiselect-input" #multiSelectWrapper>
+    <div class="p-inputgroup" [ngClass]="{'active': isDropDownOpen}" #popoverTarget>
+
+        <!-- Badge Wrapper -->
+
+        <div class="badge-wrapper" *ngIf="selectedList.length>0">
+            <div class="badges" *ngFor="let item of selectedList;let index = index">
+                <span class="badges-text">{{item.label}}</span>
+                <i class="pi icon mips-icon-close-bold" (click)="discardBadge(item, index)"></i>
+            </div>
+        </div>
+
+        <!-- Search field -->
+        <input type="text" (click)="isDropDownOpen=true; showSelectedList=false" (keyup)="applySearch()"
+            [(ngModel)]="searchText" pInputText ngClass="width30p" placeholder="{{placeholder}}" />
+
+        <!-- Badge Count -->
+        <div class="selected-list" *ngIf="selectedList.length>1" (click)="showSelectedList=!showSelectedList">
+            <span class="count">+{{selectedList.length-1}}</span>
+        </div>
+
+        <!-- Delete Popup Trigger -->
+        <div #eventOrigin class="p-inputgroup-addon" *ngIf="selectedList.length>0">
+            <!-- Delete all selected options trigger-->
+            <span class="pi icon mips-icon-close-bold hover-over-cursor mt10"
+                (click)="isDropDownOpen=false; showDeletePopup = true"></span>
+            <app-popover *ngIf="showDeletePopup" (confirmation)="conf()" (decline)="declined()"></app-popover>
+        </div>
+
+        <!-- Delete Popup -->
+
+        <!-- Down arrow caret -->
+        <div class="p-inputgroup-addon custom-height" (click)="isDropDownOpen=!isDropDownOpen;showSelectedList=false">
+            <span class="icon mips-icon-caret-down"></span>
+        </div>
+    </div>
+
+
+    <!-- Multi Select Dropdown List Options -->
+    <div class="multiselect-dropdown-list" *ngIf="isDropDownOpen">
+        <ul class="p-0 m-0">
+            <li *ngFor="let item of options| filter: searchText; let index = index" (click)="selectListValue(item)"
+                #someVar>
+                <div class="enable-ellipsis flex">
+                    <input type="checkbox" (change)="selectListValue(item)" (click)="selectListValue(item)"
+                        [checked]="item.checked" [(ngModel)]="item.checked" class="mr5px">
+                    <!-- <div [tooltipDisabled]="item.label.length > 10 ? false : true" tooltipPosition="top"
+                        pTooltip="{{item.label}}" tooltipStyleClass="custom-white-tooltip arrow-right-bottom">
+                    </div> -->
+                    <div class="enable-ellipsis">
+                        {{item.label}}
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Selected options list -->
+    <div class="selected-list-wrapper" *ngIf="showSelectedList && selectedList.length>0">
+        <div class="scroller">
+            <ul class="p-0 m-0">
+                <li class="flex justify-content-between" *ngFor="let item of selectedList; let index=index">
+                    <span>{{item.label}}</span>
+
+                    <!-- Discard selected individual option -->
+                    <span class="pi icon mips-icon-close-bold close-icon" (click)="discardBadge(item, index)"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

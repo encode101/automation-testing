@@ -1,0 +1,375 @@
+.wrapper-mips {
+
+  //***** ############ custom view table #############//
+  .customViewTable {
+    font-family: 'Open Sans', sans-serif !important;
+
+    &.p-datatable {
+      &.p-datatable-sm {
+        .p-datatable-thead {
+          tr {
+            th {
+              padding: 4px 8px;
+              font-size: 11px;
+              font-family: 'Open Sans', sans-serif;
+              background: #C9E5F3;
+              border-color: #A7C1CE;
+              color: #1F4E79;
+              line-height: 15px;
+              // border-width: 0px 1px 0px 0px;
+              .p-sortable-column-icon{
+                margin-left: 1px;
+                font-size: 12px;
+                &::before{
+                  color: #000000;
+                  content: "\e913";
+                  font-family: "imps-font" !important;
+                }
+              }
+              .search-input-group {
+                .p-inputgroup-addon {
+                  min-width: 24px;
+                  padding: 0px;
+                  border-right: 0px;
+                }
+              }
+              &.p-sortable-column{
+                &:focus{
+                  box-shadow: none;
+                }
+              }
+            }
+
+            &:nth-child(2) {
+              th {
+                padding: 4px;
+                border-top: 0px;
+              }
+            }
+            &.align-top{
+              th{
+                vertical-align: top !important;
+              }
+            }
+          }
+        }
+      }
+
+      &.p-datatable-gridlines{
+        &.p-datatable-striped {
+          &:has(.p-datatable-thead) {
+            &:has(.p-datatable-tbody) {
+              .p-datatable-tbody {
+                tr {
+                  &:nth-child(even){
+                    background-color: #f6fcff;
+                  }
+                  &.p-highlight{
+                    background: #FDE1D2;
+                    font-weight: 500;
+                  }
+                  td {
+                    font-size: 11px;
+                    font-family: 'Open Sans', sans-serif;
+                    height: 30px;
+                    padding:  5px 8px;
+                    border-color: #D8D8D8;
+                    // border-width: 1px 1px 0px 0px;
+                    .show-more-content-badge{
+                      width: 21px;
+                      height: 15px;
+                      padding: 0.5px 4px;
+                      border: 1px solid #2B91D9;
+                      border-radius: 3px;
+                      color: #2B91D9;
+                      cursor: pointer;
+                    }
+                    .icon {
+                      color: #737373;
+                    }
+                    .option-icon-wrapper{
+                      display: none;
+                      width: 19px;
+                      height: 19px;
+                      justify-content: center;
+                      align-items: center;
+                      border: 1px solid #000000;
+                      border-radius: 3px;
+                      .icon{
+                        &.mips-icon-delete{
+                          color: #000;
+                          font-size: 12px;
+                        }
+                        &:hover{
+                          color: #2B91D9;
+                        }
+                      }
+                          
+                    }
+                  }
+                  &:hover{
+                    background: #fff3e9;
+                    border-color: #d8d8d8;
+                    td {
+                      .option-icon-wrapper{
+                        display: flex;
+                        
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &:has(.p-datatable-thead) {
+          &:has(.p-datatable-tbody) {
+            .p-datatable-tbody {
+              tr {
+                td {
+                  font-size: 11px;
+                  font-family: 'Open Sans', sans-serif;
+                  height: 30px;
+                  padding:  5px 8px;
+                  border-color: #D8D8D8;
+                  // border-width: 1px 1px 0px 0px;
+                  .show-more-content-badge{
+                    width: 21px;
+                    height: 15px;
+                    padding: 0.5px 4px;
+                    border: 1px solid #2B91D9;
+                    border-radius: 3px;
+                    color: #2B91D9;
+                    cursor: pointer;
+                  }
+                  .icon {
+                    color: #737373;
+                  }
+                  .option-icon-wrapper{
+                    display: none;
+                    width: 20px;
+                    height: 20px;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid #000000;
+                    border-radius: 3px;
+                    .icon{
+                      &.mips-icon-delete{
+                        color: #000;
+                        font-size: 12px;
+                      }
+                      &:hover{
+                        color: #2B91D9;
+                      }
+                    }
+                        
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //** for filter tables 
+    &.customViewTable-filter {
+      &.p-datatable {
+        .p-datatable-thead {
+          tr {
+            th {
+              border-bottom: 0px;
+              padding-bottom: 0px;
+              &:focus{
+                box-shadow: none;
+              }
+              
+               .p-column-filter-row{
+                .p-column-filter-clear-button{
+                  margin-left: 5px;
+                  width: 12px;
+                  height: 24px;
+                  &.p-hidden-space{
+                    display: none;
+                  }
+                  .pi-filter-slash{
+                      font-size: 10px;
+                  }
+                  &:focus{
+                    box-shadow: none;
+                  }
+                  &:hover{
+                    background-color: transparent;
+                  }
+                }
+              } 
+            }
+          }
+        }
+      }
+    }
+
+    //** ############# paginator css here  
+    .p-paginator {
+      &.p-paginator-bottom {
+        height: 40px;
+        display: flex;
+        position: relative;
+        justify-content: flex-start;
+        font-size: 11px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        color: #000;
+        box-shadow: 0px -1px 4px #C1C2C3; 
+        border-top: 1px solid #f1f1f1;
+        z-index: 1;
+
+        //select box input 
+        p-dropdown {
+          order: 0;
+
+          .p-paginator-rpp-options {
+            height: 20px;
+
+            .p-dropdown-label {
+              height: 18px;
+              font-size: 11px;
+              padding: 0px 3px;
+              display: flex;
+              align-items: center;
+            }
+
+            .p-dropdown-trigger {
+              height: 17px;
+              width: 22px;
+              .pi-chevron-down{
+                transform: rotate(180deg);
+                margin-top: 5px;
+              &:before{
+                content: "\e912";
+                font-size: 11px;
+                font-family: "imps-font" !important;
+              }
+            }
+            }
+            &:not(.p-disabled){
+              &.p-focus{
+                box-shadow: none;
+              }
+            }
+          }
+          
+
+          &:before {
+            content: 'show';
+          }
+          
+        }
+
+        .p-paginator-current {
+          order: 1;
+          color: #000;
+          height: auto;
+          margin-left: 2px;
+          padding: 0px;
+        }
+
+        .p-paginator-first,
+        .p-paginator-prev,
+        .p-paginator-next,
+        .p-paginator-last{
+          height: 20px;
+          min-width: 20px;
+          margin: 0px 2.5px;
+          padding: 3px 1px;
+          font-size: 12px;
+          line-height: 17px;
+          border-radius: 3px;
+          background: #e1e1e1;
+          border: 1px solid #a3a3a3;
+          color: #3d3d3d;
+          &:focus{
+            outline: none;
+          }
+        }
+
+        .p-paginator-prev {
+          order: 3;
+          .pi-angle-left{
+            font-size: 13px;
+          }
+        }
+
+        .p-paginator-page-input {
+          order: 4;
+          .p-inputnumber-input{
+            min-width: 20px;
+            height: 21px;
+            font-size: 11px;
+            max-width: 25px;
+            border: 1px solid #ccc;
+            text-align: center;
+            padding: 0;
+            &:focus{
+              box-shadow: none;
+              border-color: #2B91D9;
+            }
+          }
+        }
+        .p-paginator-first{
+          order: 2;
+          .pi-angle-double-left{
+            font-family: "imps-font" !important;
+            font-size: 8px;
+            &::before{
+              content: "\e909";
+              
+            }
+          }
+        }
+
+        .p-paginator-next {
+          order: 5;
+          .pi-angle-right{
+            font-size: 13px;
+          }
+        }
+
+        .p-paginator-last {
+          order: 6;
+          .pi-angle-double-right{
+            font-family: "imps-font" !important;
+            font-size: 8px;
+            &::before{  
+              content: "\e90a";
+            }
+          }
+        }
+        .p-paginator-right-content{
+          order: 7;
+        }
+        .p-link{
+          &:focus{
+            box-shadow: none;
+          }
+        }
+      }
+    }
+
+    //row span table css
+    &.p-datatable {
+      &.p-datatable-sm {
+        &.row-span-table{
+          .p-datatable-tbody{
+            tr{
+              &.even-row-span{
+                background-color: #f6fcff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

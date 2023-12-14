@@ -1,0 +1,156 @@
+.wrapper-mips {
+  //********************white tooltip as per EMR styling****************//
+
+  .p-tooltip {
+    &.custom-white-tooltip {
+      opacity: 1;
+      max-width: max-content;
+      .p-tooltip-text {
+        width: max-content;
+        padding: 7px 10px;
+        color: $black-color;
+        text-align: left;
+        background-color: $bg-color-white;
+        border-radius: 4px;
+        font-size : $default-font-size;
+        box-shadow: 0px 0px 5px 0px rgba(29, 29, 29, 0.26);
+      }
+
+      .p-tooltip-arrow{
+
+        &:before,
+          &:after {
+            border: solid transparent;
+            content: "";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+          }
+          &:after{
+            border-color: rgba(255, 255, 255, 0);
+            border-width: 5px;
+            margin-left: -5px;
+          }
+          &::before{
+            border-color: rgba(197, 197, 197, 0);
+            border-width: 6px;
+            margin-left: -6px;
+          }
+      }
+
+      //*************************custom rule for white bg tooltip*******************//
+      //@@@@@
+      //**********for top position tooltips*********
+      &.p-tooltip-top {
+        .p-tooltip-arrow {
+          &:before,
+          &:after {
+            top: -4px;
+            left: 50%;
+          }
+          &:after {
+            border-top-color: #fff; 
+          }
+          &:before { 
+            border-top-color: #c5c5c5;
+          }
+        }
+
+        &-start{
+            margin-left: -15px !important;
+            .p-tooltip-arrow {
+                &:before,
+              &:after {
+                left: 20px;
+              }
+            }
+        }
+        &-end{
+            margin-right: -15px !important;
+            .p-tooltip-arrow {
+                &:before,
+              &:after {
+                left: -7px;
+              }
+            }
+        }
+      }
+
+      //*******for bottom positioning tooltips-=====/
+      &.p-tooltip-bottom {
+        .p-tooltip-arrow {
+          border-bottom-color: transparent;
+          top: 4px;
+          &:before,
+          &:after {
+            bottom: 0px;
+	        left: 50%;
+          }
+          &:after {
+            border-bottom-color: #fff; 
+          }
+          &:before { 
+            border-bottom-color: #c5c5c5;
+          }
+        }
+        &.arrow-bottom-right{
+          .p-tooltip-arrow{
+            left: 95%;
+          }
+        }
+
+        &-start{
+            margin-left: -15px !important;
+            .p-tooltip-arrow {
+                &:before,
+              &:after {
+                left: 20px;
+              }
+            }
+        }
+        &-end{
+            margin-right: -15px !important;
+            .p-tooltip-arrow {
+                &:before,
+              &:after {
+                left: -7px;
+              }
+            }
+        }
+      }
+      &.p-tooltip-right{
+        .p-tooltip-arrow {
+          border-right-color: transparent;
+          margin-top: -8px;
+          &:before,
+          &:after {
+            top: 0px;
+            left: 50%;
+          }
+          &:after {
+            border-right-color: #fff; 
+            left: -1px;
+
+          }
+          &:before { 
+            border-right-color: #c5c5c5;
+            left: -2px;
+            top: -1px;
+          }
+        }
+      }
+      &.p-tooltip-left{
+        .p-tooltip-arrow {
+          border-left-color: #fff;
+         
+        }
+      }
+      &.arrow-right-bottom{
+        .p-tooltip-arrow{
+          left: calc( 100% - 15px );
+        }
+      }
+    }
+  }
+}

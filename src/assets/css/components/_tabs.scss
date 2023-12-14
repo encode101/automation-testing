@@ -1,0 +1,95 @@
+.wrapper-mips {
+  //**  blue pad primary tab 
+    .blue-pad {
+        background-color: $primary-color;
+        .primary-tabs {
+            display: flex;
+          .tab-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 20px;
+            margin: auto;
+            padding: 15px 10px;
+            font-size: 13px;
+            color: $secondary-color;
+            border: none;
+            border-radius: 0px;
+            border-color: transparent;
+            cursor: pointer;
+          }
+          .tab-link.active {
+            background-color: $highlight-dark;
+          }
+        }
+      }
+      //** primary tab css here 
+      .tabs-wrap{
+        .primary-tabs{
+          ul{
+            &.p-tabview-nav{
+              border-bottom: 2px solid $tab-bg;
+            padding-left: 20px;
+            li{
+              position: relative;
+              bottom: -2px;
+              border-right: 1px solid $tab-bg;
+              border-top: 2px solid $tab-bg;
+              border-radius: 0;
+
+              &:first-child{
+                border-left: 2px solid $tab-bg;
+                border-top-left-radius: 3px;
+              }
+
+              &:nth-last-child(2){
+                border-left: 1px solid $tab-bg;
+                border-top-right-radius: 3px;
+                border-right-width: 2px;
+              }
+
+              &.p-highlight,
+              .active{
+                a{
+                  background: $bg-color-white-light;
+                  color: $primary-color;
+                  border-bottom-color: $bg-color-white-light;
+                  &:focus{
+                    box-shadow: none;
+                  }
+                  
+                }
+                &:hover{
+                  a{
+                    background: $secondary-bg
+                  }
+                }
+              }
+              a{
+                border-radius: 0;
+                background: $tab-bg;
+                color: $secondary-color;
+                font-size: 11px;
+                padding: 7px 10px;
+                border-bottom-color: #009EDD;
+                font-weight: 400;
+              }
+
+              
+            }
+            }
+            
+            
+          }
+        }
+        &.pos-tab-end{
+          .primary-tabs{
+            ul{
+              justify-content: flex-end;
+              padding-right: 15px;
+            }
+          }
+        }
+      }
+}
+
